@@ -11,13 +11,13 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import firebaseApp from './firebase';
 
-// firebaseApp.auth().onAuthStateChnged((user) => {
-//   if (user) {
-//     console.log('user', user);
-//   } else {
-//     console.log('No User');
-//   }
-// });
+firebaseApp.auth().onAuthStateChanged((user) => {
+  if (user) {
+    console.log('user', user);
+  } else {
+    console.log('No User');
+  }
+});
 
 ReactDOM.render(
   <Router path="/" history={browserHistory}>
