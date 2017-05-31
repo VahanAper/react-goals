@@ -11,7 +11,7 @@ import { createStore } from 'redux';
 import App from './components/App';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
-import firebaseApp from './firebase';
+import { firebaseApp } from './firebase';
 import reducer from './reducers';
 import { logUser } from './actions';
 
