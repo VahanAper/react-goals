@@ -13,9 +13,11 @@ import firebaseApp from './firebase';
 
 firebaseApp.auth().onAuthStateChanged((user) => {
   if (user) {
-    console.log('user', user);
+    // console.log('user', user);
+    browserHistory.push('/app');
   } else {
-    console.log('No User');
+    // console.log('No User');
+    browserHistory.replace('/signin');
   }
 });
 
